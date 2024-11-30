@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .project {
+    padding: 80px 0;
+}
+
+.project h1 {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(94, 234, 212);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+.project h1 span {
+    color: white;
+}
+
+.container-project {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.field-project {
+    width: 42%;
+    border-radius: 12px;
+    padding: 12px 40px 12px 12px;
+    background-color: rgb(16, 65, 62);
+    border: 1px solid rgb(94, 234, 212);
+    transition: transform .3s ease-in-out;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-rows: max-content;
+    row-gap: 22px;
+    grid-template-areas: 
+    'main-project' 'technology-project';
+    transition: transform .3s;
+}
+
+.field-project:hover {
+    transform: translateY(-10px);
+}
+
+.link-to-project {
+    grid-area: main-project;
+    display: flex;
+    gap: 16px;
+}
+
+.field-project img {
+    border-radius: 8px;
+    width: 30%;
+    min-height: 120px;
+}
+
+.field-text-project {
+    width: 70%;
+    margin-top: 3px;
+}
+
+.field-text-project h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.field-text-project h3 span {
+    color: rgb(94, 234, 212);
+}
+
+.description-project {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.technology-project {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    grid-area: technology-project;;
+}
+
+.technology-project a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: rgb(16, 65, 62);
+    border: 2px solid rgb(27, 137, 122);
+    color: rgb(94, 234, 212);
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+.technology-project a:hover {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <!-- PROJECT -->
+    <section class="project" id="project">
+        <h1>Pro<span>ject</span></h1>
+
+        <div class="container-project">
+
+            <div class="field-project">
+                <a href="" class="link-to-project">
+                    <img src="img/niscala.png" alt="">
+                    <div class="field-text-project">
+                        <h3>Desain Web <span>lorem</span></h3>
+                        <p class="description-project">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </a>
+                <div class="technology-project">
+                    <a href="">HTML</a>
+                    <a href="">CSS</a>
+                    <a href="">SCSS</a>
+                </div>
+            </div>
+
+
+
+            <div class="field-project">
+                <a href="" class="link-to-project">
+                    <img src="img/foodfunday.png" alt="">
+                    <div class="field-text-project">
+                        <h3>Pemrograman Web 1 <span> </span></h3>
+                        <p class="description-project">Tugas</p>
+                    </div>
+                </a>
+                <div class="technology-project">
+                    <a href="">HTML</a>
+                    <a href="">CSS</a>
+                    <a href="">JS</a>
+                </div>
+            </div>
+
+
+
+            <div class="field-project">
+                <a href="" class="link-to-project">
+                    <img src="img/uiux.png" alt="">
+                    <div class="field-text-project">
+                        <h3>Desain  <span>Pr</span></h3>
+                        <p class="description-project">Ui/Ux </p>
+                    </div>
+                </a>
+                <div class="technology-project">
+                    <a href="">FIGMA</a>
+                </div>
+            </div>
+
+            <div class="field-project">
+                <a href="" class="link-to-project">
+                    <img src="img/game.png" alt="">
+                    <div class="field-text-project">
+                        <h3>Desain <span></span></h3>
+                        <p class="description-project"></p>
+                    </div>
+                </a>
+                <div class="technology-project">
+                    <a href="">Blender</a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+</body>
+</html>
