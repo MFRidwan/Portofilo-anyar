@@ -7,6 +7,7 @@
     --first-color: #0e2431;
     --second-color: #6a59d1;
     --third-color: #777;
+    --logo-timeline-content: #08131a;
 
     /*--------- Hover colors -----------*/
     --hover-color: #614fd0;
@@ -36,6 +37,29 @@
     --scroll-thumb-hover-color: #454f6b;
 }
 
+.dark-theme {
+    /*--------- main theme colors -----------*/
+    --first-color: #fff;
+    --second-color: #6a59d1;
+    --third-color: #a9afc3;
+    --logo-timeline-content: #ffffff;
+
+    /*--------- Background Colors -----------*/
+    --body-bg-color: #0e1b31;
+    --card-bg-coolor: #132347;
+    --modal-bg-color: #102048;
+    --line-color: #454f6b;
+    --bg-transparent-color: rgba(255, 255, 255, 0.1);
+    --transparent-color-01: rgba(255, 255, 255, 0.1);
+
+    /*--------- Color Filter -----------*/
+    --color-filter: invert(0);
+
+    /*--------- Scroll bar colors -----------*/
+    --scroll-bar-color: #c1ceff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
 
 * {
     margin: 0;
@@ -87,6 +111,28 @@ li {
 }
 
 /*--------- Light/Dark theme buttom -----------*/
+.theme-btn {
+    z-index: 999999;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background: var(--transparent-color-01);
+    backdrop-filter: blur(20px);
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.theme-btn .fa-sun, .theme-btn.sun .fa-moon {
+    display: none;
+}
+
+.theme-btn.sun .fa-sun {
+    display: block;
+}
 
 /*--------- Scroll bar -----------*/
 ::-webkit-scrollbar {
@@ -149,6 +195,10 @@ header.sticky .nav-bar {
     border-bottom: 3px solid transparent;
 }
 
+.nav-items a.active {
+    color: var(--second-color);
+}
+
 
 .nav-items a:not(:last-child) {
     margin-right: 50px;
@@ -183,6 +233,7 @@ header.sticky .nav-bar {
     flex-direction: column ;
     margin-right: 40px;
 }
+
 
 .home-container .media-icons a {
     color: var(--second-color);
@@ -234,9 +285,7 @@ header.sticky .nav-bar {
 }
 
 .home-container .home-img img {
-    width: 70%;
-    border-radius: 50%;
-    margin-left: 11rem;
+    width: 100%;
     transform: translate(0, 0);
 }
 
@@ -320,7 +369,6 @@ header.sticky .nav-bar {
 .about-img img {
     max-width: 100%;
     min-width: 500px;
-    border-radius: 10px;
 }
 
 .about-info .description {
@@ -436,16 +484,16 @@ header.sticky .nav-bar {
     height: 25px;
     line-height: 25px;
     right: -17px;
-    background: var(--card-bg-coolor);
+    background: var(--body-bg-color);
     border-radius: 50%;
-    border: 4px solid var(--second-color);
+    border: 4px solid var(--first-color);
     top: 15px;
     z-index: 100;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: 600;
     font-family: "Font Awesome\ 5 Free";
-    color: rgb(90, 64, 64)
+    color: var(--logo-timeline-content);
 }
 
 .education .left {
@@ -508,14 +556,14 @@ header.sticky .nav-bar {
 .education .content .tag h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--second-color);
+    color: var(--first-color);
 }
 
 .education .content .desc p {
     font-size: 1rem;
     padding-bottom: 15px;
     font-weight: 500;
-    color: black;
+    color: var(--first-color);
     margin-left: -15px;
 }
 
@@ -664,13 +712,28 @@ header.sticky .nav-bar {
     width: 85%;
 }
 .bar .javascript:before {
-    width: 55%;
+    width: 75%;
 }
 .bar .php:before {
     width: 60%;
 }
 .bar .mysql:before {
     width: 85%;
+}
+.bar .figma:before {
+    width: 80%;
+}
+.bar .canva:before {
+    width: 90%;
+}
+.bar .alight:before {
+    width: 65%;
+}
+.bar .capcut:before {
+    width: 60%;
+}
+.bar .lightroom:before {
+    width: 50%;
 }
 
 .experience-card {
@@ -800,6 +863,7 @@ header.sticky .nav-bar {
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 10px;
+    color: var(--first-color);
 }
 
 .field-text-project h3 span {
@@ -811,6 +875,7 @@ header.sticky .nav-bar {
     font-size: 16px;
     line-height: 22px;
     text-align: justify;
+    color: var(--first-color);
 }
 
 .technology-project {
@@ -1248,4 +1313,19 @@ footer a {
     font-size: var(--normal-font-size);
     font-weight: 300;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 1070px) {
+    /* ----- Header Navigation menu ------ */
+    .navigation {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--transparent-color-01);
+    }
 }

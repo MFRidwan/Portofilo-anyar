@@ -64,6 +64,29 @@ for (let i = 0; i < slideBeforeCertificate.length; i++) {
     })
 }
 
+//========== website dark/light theme ==================//
+const themeBtn = document.querySelector(".theme-btn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    themeBtn.classList.toggle("sun")
+
+    localStorage.setItem("saved-theme", getCurrentTheme());
+    localStorage.setItem("saved-icon", getCurrentIcon());
+});
+
+const getCurrentTheme = () => document.body.classList.contains("dark-theme") ? "dark" : "light";
+const getCurrentIcon = () => themeBtn.classList.contains("sun") ? "sun" : "moon";
+
+const savedTheme = localStorage.getItem("saved-theme");
+const savedIcon = localStorage.getItem("saved-icon");
+
+if (savedTheme) {
+    document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
+    document.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
+}
+
+
 //=========== scroll to top button ==================//
 const scrollTopBtn = document.querySelector('.scrollToTop-btn');
 
@@ -87,6 +110,11 @@ window.addEventListener("scroll", () => {
         let id = current.getAttribute("id");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
+        }
+        else {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+        }
     });
 });
 
@@ -97,15 +125,3 @@ window.addEventListener("scroll", () => {
 
 
 
-
-
-
-
-//=========== Typed Js ==================//
-var typed = new Typed('#element', {
-    strings: ['Web Developer', 'Web Designer', 'Front-end Developer'],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay: 1000,
-    loop: true,
-});
