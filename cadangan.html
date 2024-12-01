@@ -233,3 +233,244 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
 </div>
+
+<!--============= Riwayat sekolah Section =============-->
+<section class="education" id="riwayat">
+    <h1 class="section-title-03">Education</h1>
+    <h2 class="section-title-04">Education</h2>
+    <div class="timeline">
+        <div class="container right">
+            <div class="content">
+                <div class="tag">
+                    <h2>SMK NEGERI 1 MAJA</h2>
+                </div>
+                <div class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <div class="tag">
+                    <h2>MTS MAARIF CIKEDUNG</h2>
+                </div>
+                <div class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <div class="tag">
+                    <h2>MI NURUL JANNAH</h2>
+                </div>
+                <div class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <div class="tag">
+                    <h2>TK</h2>
+                </div>
+                <div class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+/*--------- Education Sections -----------*/
+.education {
+    position: relative;
+    position: relative;
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 0;
+}
+
+.section-title-03 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .1;
+}
+
+.section-title-04 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    transform: translateY(-80px);
+}
+
+.section-title-04:before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    margin-right: 405px;
+    background: var(--second-color);
+}
+
+.education .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: var(--first-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 2;
+}
+
+.education .container {
+    padding: 10px 40px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+.education .container::after {
+    content: '\f501';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    right: -17px;
+    background: var(--body-bg-color);
+    border-radius: 50%;
+    border: 4px solid var(--first-color);
+    top: 15px;
+    z-index: 100;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Font Awesome\ 5 Free";
+    color: var(--logo-timeline-content);
+}
+
+.education .left {
+    left: 0;
+}
+
+.education .right {
+    left: 50%;
+}
+
+.education .left::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--third-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--third-color);
+}
+
+.education .right::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--third-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--third-color) transparent transparent ;
+}
+
+.education .right::after {
+    left: -16px;
+}
+
+.education .content {
+    background: var(--card-bg-coolor);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    border-bottom: 3px solid var(--second-color);
+}
+
+.education .content .tag {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.education .content .desc {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+.education .content .tag h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--first-color);
+}
+
+.education .content .desc p {
+    font-size: 1rem;
+    padding-bottom: 15px;
+    font-weight: 500;
+    color: var(--first-color);
+    margin-left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+    .education .timeline {
+        margin-top: 2rem;
+    }
+    .education .timeline::after {
+        left: 31px;
+    }
+    .education .container {
+        width: 50%;
+        padding-left: 5rem;
+        padding-right: 1rem;
+    }
+    .section-title-03  {
+        margin-left: 120px;
+    }
+    
+    .section-title-04 {
+        margin-left: 210px;
+    }
+    ..section-title-04:before {
+        margin-left: -1000px;
+    }
+    .education .container::after {
+        font-size: 1rem;
+    }
+    .education .container::before {
+        left: 61px;
+        border: medium solid var(--third-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--third-color) transparent transparent 
+    }
+    .education .left::after {
+        left: 15px;
+    }
+    .education .right::after {
+        left: 15px;
+    }
+    .education .right {
+        left: 0%;
+    }
+}
