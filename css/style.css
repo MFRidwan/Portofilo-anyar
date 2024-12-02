@@ -1132,7 +1132,7 @@ footer a {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 600px) {
     /* ----- Header Navigation menu ------ */
     .navigation {
         position: fixed;
@@ -1202,11 +1202,13 @@ footer a {
         height: 40px;
         cursor:pointer;
         display: block;
+        margin-right: 18px;
     }
 
     /* ----- Home Section ------ */
     .home .home-container .info {
-        font-size: 0.85rem
+        font-size: 0.75rem;
+        margin-top: 250px;
     }
 
     /* ----- About section ------ */
@@ -1218,16 +1220,19 @@ footer a {
 
     .about-img img {
         max-width: 0;
-        width: 100%
+        width: 100%;
+        position: absolute;
+    }
+
+    .about-info {
+        font-size: 0.70rem;
+        margin-top: 450px;
+    }
+
+    .description h3, h4, span {
+        margin-left: 25px;
     }
     
-    .about-info .profesional-list {
-        flex-direction: ;
-    }
-    
-    .about-info .profesional-list .list-item {
-        justify-content: start;
-    }
 
     /* ----- get in touch ------ */
     .get-in-touch .contact-card {
@@ -1289,8 +1294,8 @@ footer a {
 
 }
 
-/* ------ media query max-width 730px ------ */
-@media screen and (max-width: 730px) {
+/* ------ media query max-width 600px ------ */
+@media screen and (max-width: 600px) {
     /* ------ common styles for all section ------ */
     body{
         margin: 5rem 0 0 0;
@@ -1315,13 +1320,14 @@ footer a {
     }
 
     .home-container .home-img img {
-        width: 75%;
+        width: 100%;
         transform: translate(80px, -100px);
-        margin-top: -150px;
+        margin-top: -300px;
     }
 
     .home .home-container .info {
         font-size: 0.8rem;
+
     }
 
     .media-icons {
