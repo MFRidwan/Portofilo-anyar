@@ -732,7 +732,7 @@ header.sticky .nav-bar {
     background: var(--hover-color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     /* PROJECT MOBILE */
     .container-project {
         width: 100%;
@@ -938,7 +938,7 @@ header.sticky .nav-bar {
 .overlay-image-certificate button:hover {
     cursor: pointer;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     /* CERTIFICATE MOBILE */
     .certification h1 {
         font-size: 42px;
@@ -1132,7 +1132,7 @@ footer a {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     /* ----- Header Navigation menu ------ */
     .navigation {
         position: fixed;
@@ -1266,6 +1266,7 @@ footer a {
     /* ----- footer section ------ */
     footer .footer-container {
         flex-direction: column;
+        width: 100%;
     }
 
     .footer-container .about {
@@ -1294,12 +1295,10 @@ footer a {
 
 }
 
-/* ------ media query max-width 600px ------ */
-@media screen and (max-width: 600px) {
+/* ------ media query max-width 767px ------ */
+@media screen and (max-width: 767px) {
     /* ------ common styles for all section ------ */
-    body{
-        margin: 5rem 0 0 0;
-    }
+    
 
     .section-title-01 {
         font-size: 3em;
@@ -1330,8 +1329,8 @@ footer a {
 
     }
 
-    .media-icons {
-        margin-bottom: 80px;
+    .media-icons  {
+        margin-top: 200px;
     }
 
     /* ----- get-in touch section  ------ */
@@ -1346,5 +1345,15 @@ footer a {
 
     .contact-card .contact-btn .btn {
         font-size: 0.8rem;
+    }
+
+    /* contact */
+    .second-row {
+        width: 100%;
+    }
+
+    .section {
+        margin-right: 0;
+        margin-left: 10px;
     }
 }
