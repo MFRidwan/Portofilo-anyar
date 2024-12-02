@@ -1202,7 +1202,7 @@ footer a {
         height: 40px;
         cursor: pointer;
         display: block;
-        margin-right: 30px;
+        margin-right: 40px;
     }
 
     /* ----- Home Section ------ */
@@ -1229,7 +1229,7 @@ footer a {
         margin-top: 450px;
     }
 
-    .description h3, h4, span {
+    .description h3, h4 {
         margin-left: 25px;
     }
     
