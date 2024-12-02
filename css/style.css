@@ -1233,6 +1233,28 @@ footer a {
     .description h3, h4 {
         margin-left: 25px;
     }
+
+    /* skills */
+    .bar {
+        margin-left: 15px;
+    }
+
+    .item {
+        margin-left: 15px;
+    }
+
+    .education h4 {
+        margin-top: 150px;
+    }
+
+    .skills-description {
+        margin-bottom: -110px;
+        margin-left: 17px;
+    }
+
+    .education1 {
+        margin-top: 20px;
+    }
     
 
     /* ----- get in touch ------ */
@@ -1254,8 +1276,10 @@ footer a {
     
     .contact .contact-left {
         margin-bottom: 40px;
+        margin-left: 15px;
     }
     
+
     .contact-form .second-row {
         flex-direction: column;
     }
