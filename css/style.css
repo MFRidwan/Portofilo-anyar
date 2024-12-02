@@ -745,6 +745,10 @@ header.sticky .nav-bar {
         padding: 12px 16px 24px 16px;
     }
 
+    #field-project {
+        height: 420px;
+    }
+
     .field-project img {
         width: 100%;
         margin-right: 0;
@@ -772,6 +776,7 @@ header.sticky .nav-bar {
         justify-content: end;
         width: 100%;
     }
+
 }
 
 /* === Get in touch == */
