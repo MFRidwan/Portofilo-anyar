@@ -1356,4 +1356,8 @@ footer a {
         margin-right: 0;
         margin-left: 10px;
     }
+
+    .theme-btn {
+        margin-right: 30px;
+    }
 }
